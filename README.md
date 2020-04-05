@@ -2,6 +2,11 @@
 
 An API providing data relating to the COVID-19 outbreak, written using the [GraphQL](https://graphql.org/) query language. The underlying data is based on the [CSSEGISandData/COVID-19 repository](https://github.com/CSSEGISandData/COVID-19) maintained by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE).
 
+Current API endpoint:
+https://covid-19-api-w2brod24ua-ue.a.run.app/graphql
+
+> Note: This URL is likely to change in the future.
+
 ## Running
 
 - Fork & clone the repo
