@@ -1,4 +1,4 @@
-import { fetchAndConvertCsv } from "../../utils/convertCsvToJson";
+import { fetchAndConvertCsv } from "../../utils/convertCSVToJSON";
 
 const GLOBAL_CONFIRMED_CSV_URL =
   "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
@@ -13,7 +13,7 @@ export const getConfirmedGlobal = async () => {
     const nonTimeseriesHeaders = headers.slice(0, 4);
     const timeseriesHeaders = headers.slice(4);
 
-    return raw.reduce((regionsParsed, region) => {
+    return raw.reduce((regionsParsed: any[], region: any[]) => {
       const nonTimeseriesData = region.slice(0, 4);
       const timeseriesData = region.slice(4);
 
