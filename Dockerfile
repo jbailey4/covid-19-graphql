@@ -11,7 +11,6 @@ COPY . /usr/src/app
 ENV NODE_ENV=production
 RUN yarn build
 
-COPY ./dist /usr/src/app
+COPY . /usr/src/app
 
-EXPOSE 4700
 CMD [ "yarn", "start" ]

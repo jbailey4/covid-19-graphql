@@ -3,6 +3,8 @@ import graphqlHTTP from 'express-graphql'
 import jhuResolver from './data-sources/jhu-csse/resolvers'
 import schema from './schema'
 
+const PORT = process.env.PORT || 8080;
+
 const app = express()
 
 const root = {
@@ -15,4 +17,8 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }))
 
-app.listen(4700)
+app.get('/', (request, response) => {
+	response.redirect('https://github.com/jbailey4/covid-19-graphql')
+})
+
+app.listen(PORT)
