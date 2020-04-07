@@ -6,5 +6,9 @@ export default buildSchema(`
   type Query {
     confirmedAll: [Region]
     confirmed(regions: [String]): [Region]
+    deathsAll: [Region]
+    deaths(regions: [String]): [Region]
+    recoveredAll: [Region]
+    recovered(regions: [String]): [Region]
   }
 `);

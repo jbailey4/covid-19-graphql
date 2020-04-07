@@ -1,6 +1,8 @@
 import express from 'express'
 import graphqlHTTP from 'express-graphql'
-import jhuResolver from './data-sources/jhu-csse/resolvers'
+import jhuConfirmedResolver from './data-sources/jhu-csse/resolvers/confirmed'
+import jhuDeathsResolver from './data-sources/jhu-csse/resolvers/deaths'
+import jhuRecoveredResolver from './data-sources/jhu-csse/resolvers/recovered'
 import schema from './schema'
 
 const PORT = process.env.PORT || 8080;
@@ -8,8 +10,10 @@ const PORT = process.env.PORT || 8080;
 const app = express()
 
 const root = {
-  ...jhuResolver
-};
+  ...jhuConfirmedResolver,
+  ...jhuDeathsResolver,
+  ...jhuRecoveredResolver
+}
 
 app.use('/graphql', graphqlHTTP({
   schema,
