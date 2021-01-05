@@ -14,7 +14,7 @@
     "start:dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "csvtojson": "^2.0.10",
     "dataloader": "^2.0.0",
     "express": "^4.17.1",
